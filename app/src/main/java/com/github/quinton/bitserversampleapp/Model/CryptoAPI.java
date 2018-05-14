@@ -23,7 +23,4 @@ public interface CryptoAPI {
     // Neo call
     @GET("NEOUSD")
     Call<Currency> getNEO();
-
-
-
 }
