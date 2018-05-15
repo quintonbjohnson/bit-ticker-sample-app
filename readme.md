@@ -14,7 +14,7 @@ Current Version: 0.1
 * [Retrofit](http://square.github.io/retrofit/)
 
 ### Download Instructions
-* Download the zip from the repository
+* [Download the zip from the repository](https://github.com/quintonj/BitServerSampleApp/archive/master.zip)
 
 ### Build / Installation / Run Instructions 
 1. Open Android Studio
