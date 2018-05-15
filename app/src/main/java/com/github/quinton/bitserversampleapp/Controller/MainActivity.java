@@ -11,6 +11,8 @@ import com.github.quinton.bitserversampleapp.Model.CryptoService;
 import com.github.quinton.bitserversampleapp.Model.Currency;
 import com.github.quinton.bitserversampleapp.R;
 
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * TextView for current Bitcoin price
      */
-    @BindView(R.id.BitText) TextView bitcoinText;
+    @BindView(R.id.BTCText) TextView bitText;
 
     /**
      * TextView for current Ethereum price
@@ -43,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.NEOText) TextView neoText;
 
     /**
-     * Service for specific endpoint
-     */
-    private CryptoService bitIndexService;
-
-    /**
      * API call from model package to use for Retrofit instance
      */
     private CryptoAPI bitIndexAPI;
@@ -55,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        this.setContentView(R.layout.activity_main);
 
         // Bind view to controller
         ButterKnife.bind(this);
 
         // Creating service instance to access endpoint
-        bitIndexService = new CryptoService();
+        CryptoService bitIndexService = new CryptoService();
 
         // Retrieving endpoint
         bitIndexAPI = bitIndexService.getEndpoint();
@@ -81,10 +78,9 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
-                int statusCode = response.code();
                 Currency bitcoinTick = response.body();
                 if (bitcoinTick != null) {
-                    bitcoinText.setText("BTC: " + Double.toString(bitcoinTick.getPrice()));
+                    bitText.setText(String.format(Locale.US, "%.2f", bitcoinTick.getPrice()));
                 }
             }
 
@@ -100,10 +96,9 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
-                int statusCode = response.code();
                 Currency ethTick = response.body();
                 if (ethTick != null) {
-                    ethText.setText("ETH: " + Double.toString(ethTick.getPrice()));
+                    ethText.setText(String.format(Locale.US, "%.2f", ethTick.getPrice()));
                 }
             }
 
@@ -120,10 +115,9 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
-                int statusCode = response.code();
                 Currency ltcTick = response.body();
                 if (ltcTick != null) {
-                    ltcText.setText("LTC: " + Double.toString(ltcTick.getPrice()));
+                    ltcText.setText(String.format(Locale.US, "%.2f", ltcTick.getPrice()));
                 }
             }
 
@@ -139,10 +133,9 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
-                int statusCode = response.code();
                 Currency neoTick = response.body();
                 if (neoTick != null) {
-                    neoText.setText("NEO: " + Double.toString(neoTick.getPrice()));
+                    neoText.setText(String.format(Locale.US, "%.2f", neoTick.getPrice()));
                 }
             }
 

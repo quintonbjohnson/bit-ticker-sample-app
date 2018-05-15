@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">BitServerSampleApp</string>
+    <string name="cryptocurrency_ticker">Cryptocurrency Ticker</string>
+    <string name="btc_image">BTC Image</string>
+    <string name="bitcoin">Bitcoin</string>
+    <string name="_0000_00">0000.00</string>
+    <string name="eth_image">ETH Image</string>
+    <string name="ethereum">Ethereum</string>
+    <string name="litecoin">Litecoin</string>
+    <string name="ltc_image">LTC Image</string>
+    <string name="neo_image">NEO Image</string>
+    <string name="neo">Neo</string>
+    <string name="dash">-</string>
 </resources>
