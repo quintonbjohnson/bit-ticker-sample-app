@@ -2,7 +2,7 @@
 Simple exercise app to create a ticker for cryptocurrencies and contact API endpoints to retrieve data.
 
 <p align="center">
-  <img src ="http://i.imgur.com/Ibmcycb.png"/>
+  <img src ="https://i.imgur.com/aTZnas2.png"/>
 </p>
 
 ## Release Notes
