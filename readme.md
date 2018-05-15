@@ -1,4 +1,9 @@
 # BitServerSampleApp
+Simple exercise app to create a ticker for cryptocurrencies and contact API endpoints to retrieve data.
+
+<p align="center">
+  <img src ="http://i.imgur.com/Ibmcycb.png"/>
+</p>
 
 ## Release Notes
 Current Version: 0.1
