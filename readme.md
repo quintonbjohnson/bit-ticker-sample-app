@@ -1,5 +1,5 @@
 # BitServerSampleApp
-Simple exercise app to create a ticker for cryptocurrencies and contact API endpoints to retrieve data.
+Simple coding exercise app to create a ticker for cryptocurrencies and contact API endpoints to retrieve data.
 
 <p align="center">
   <img src ="https://i.imgur.com/aTZnas2.png"/>
