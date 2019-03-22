@@ -1,4 +1,4 @@
-# BitServerSampleApp
+# Bit Ticker Sample App
 Simple coding exercise app to create a ticker for cryptocurrencies and contact API endpoints to retrieve data.
 
 <p align="center">
